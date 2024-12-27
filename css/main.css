@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.menu {
+    background-color: #333;
+    color: white;
+    padding: 10px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu svg {
+    width: 40px;
+    height: 40px;
+}
+
+.menu .hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu ul li {
+    margin-left: 20px;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.title {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.login-form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        justify-content: center;
+    }
+
+    .menu ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu ul.active {
+        display: flex;
+    }
+
+    .menu ul li {
+        margin: 5px 0;
+    }
+
+    .menu .hamburger {
+        display: block;
+        position: absolute;
+        right: 20px;
+    }
+}
